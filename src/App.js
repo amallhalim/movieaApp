@@ -3,12 +3,16 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 
 import Approuter from "./router/Approuter.js";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LangContext from "./context/language.js";
 // const App=()=>{
 
 function App() {
   const [lang, setLang] = useState("en");
+
+  // const [lang, setLang] = useContext(LangContext);
+  // const [lang2, setLang2] = useContext(LangContext);
+  // console.log("lan=====", lang2);
   return (
     <div
       className={lang === "ar" ? "text-right" : "text-left"}

@@ -52,14 +52,14 @@ export default function Header() {
             >
               favorites=
             </NavLink>
+            <NavLink to="AboutUs" className="mx-5 ">
+              AboutUs ---
+            </NavLink>
             <NavLink to="Register" className="mx-5 ">
               Register
             </NavLink>
             <NavLink to="contactus" className="mx-5">
               Contactus
-            </NavLink>
-            <NavLink to="AboutUs" className="mx-5 ">
-              AboutUs
             </NavLink>
           </Nav>
 

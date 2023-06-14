@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import axiosInstance from "../Apis/config";
 import Cardd from "../components/Card";
-import langContext from "./../context/language";
+
+import { useSelector } from "react-redux";
+import LangContext from "../context/language";
 
 export default function Movies() {
   const navigate = useNavigate();
+  const { lang, setLang } = useContext(LangContext);
 
   const [moviesList, setMoviesList] = useState([]);
-  // console.log(moviesList);
-  const [lang, setLang] = useState(langContext);
+  // const [lang, setLang] = useContext(langContext);
+  console.log("---------------lang", lang);
   useEffect(() => {
     axiosInstance
       .get("/movie/popular", {
         params: {
-          // language: lang,
+          language: lang,
         },
       })
       .then(res =>
@@ -24,7 +27,7 @@ export default function Movies() {
         setMoviesList(res.data.results)
       )
       .catch(error => console.log(error));
-  }, []);
+  }, [lang]);
 
   const alertClickedmovie = (e, movie) => {
     // console.log("movie", movie);

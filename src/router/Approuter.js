@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 // import AboutUs from "../pages/AboutUs";
-import Movies from "../pages/Movies";
+// import Movies from "../pages/Movies";
 // import Notfound from "../pages/Notfound";
 // import Register from "../pages/Register";
 // import Favorites from "../pages/Favorites";
@@ -17,12 +17,21 @@ const Favorites = React.lazy(() => import("../pages/Favorites"));
 const Register = React.lazy(() => import("../pages/Register"));
 const Notfound = React.lazy(() => import("../pages/Notfound"));
 const AboutUs = React.lazy(() => import("../pages/AboutUs"));
+const Movies = React.lazy(() => import("../pages/Movies"));
 
 export default function Approuter() {
   return (
     <Routes>
       <Route element={<LayoutWithNav />}>
-        <Route path="/" element={<Movies />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<h1>Loading ...</h1>}>
+              <Movies />
+            </Suspense>
+          }
+        />
+
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/SearchBar" element={<SearchBar />} />

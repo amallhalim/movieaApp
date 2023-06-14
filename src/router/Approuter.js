@@ -1,15 +1,22 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "../pages/AboutUs";
+// import AboutUs from "../pages/AboutUs";
 import Movies from "../pages/Movies";
-import Notfound from "../pages/Notfound";
-import Register from "../pages/Register";
-import Favorites from "../pages/Favorites";
-import Contactus from "../pages/Contactus";
-import Child from "../pages/Child";
+// import Notfound from "../pages/Notfound";
+// import Register from "../pages/Register";
+// import Favorites from "../pages/Favorites";
+// import Contactus from "../pages/Contactus";
+// import Child from "../pages/Child";
 import LayoutWithNav from "../components/LayoutWithNav.js";
 import SearchBar from "../components/SearchBar";
-import MoviesDetails from "../pages/MoviesDetails";
+// import MoviesDetails from "../pages/MoviesDetails";
+const MoviesDetails = React.lazy(() => import("../pages/MoviesDetails"));
+const Child = React.lazy(() => import("../pages/Child"));
+const Contactus = React.lazy(() => import("../pages/Contactus"));
+const Favorites = React.lazy(() => import("../pages/Favorites"));
+const Register = React.lazy(() => import("../pages/Register"));
+const Notfound = React.lazy(() => import("../pages/Notfound"));
+const AboutUs = React.lazy(() => import("../pages/AboutUs"));
 
 export default function Approuter() {
   return (

@@ -19,6 +19,7 @@ export default function Approuter() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/SearchBar" element={<SearchBar />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/moviedetails/:id" element={<MoviesDetails />} />
         <Route path="/movies" element={<Movies />} />
 
@@ -27,7 +28,6 @@ export default function Approuter() {
           <Route path="Movies" element={<Movies />} />
           {/* in child not use / slash */}
         </Route>
-        <Route path="/contactus" element={<Contactus />} />
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>

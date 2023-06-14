@@ -1,0 +1,15 @@
+{
+  "userId":"1",
+  
+  "cartId":["1"],
+  "address"{
+  "city":"mansora",
+  "street":"alnakla",
+  "building":"555",
+  "governorate:"dakahlia",
+  "apartment":"12",
+  "postalCode:"123",
+  }
+  "phone":"010258555555",
+  
+  }

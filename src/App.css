@@ -140,3 +140,24 @@ header {
   /* background-color: white; */
 }
 /*  end  search  */
+/*  start  moviedetails  */
+.moviedetails {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* z-index: -5; */
+  /* filter: grayscale(100%); */
+}
+.thecard {
+  /* z-index: 55; */
+}
+.filter {
+  background-image: linear-gradient(
+    to right,
+    rgba(31.5, 10.5, 10.5, 1) calc((50vw - 170px) - 340px),
+    rgba(31.5, 10.5, 10.5, 0.84) 50%,
+    rgba(12, 32, 11, 0.84) 100%
+  );
+  background-color: red;
+}
+/*  end  moviedetails  */

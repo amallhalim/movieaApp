@@ -20,7 +20,7 @@ export default function FavCard({ movie }) {
       <div className="row-cols-1">
         <Card
           className="col-md-3 my-0 p-0 mx-0 w-100 "
-          style={{ heigth: "50px" }}
+          // style={{ height: "50px" }}
         >
           <Card.Img
             variant="top"

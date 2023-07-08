@@ -10,7 +10,8 @@ import Favorites from "../pages/Favorites";
 import Contactus from "../pages/Contactus";
 import Child from "../pages/Child";
 import LayoutWithNav from "../components/LayoutWithNav.js";
-import SearchBar from "../components/SearchBar";
+// import SeachBar from "../components/SearchBar";
+import Searchpage from "../pages/Searchpage";
 // import MoviesDetails from "../pages/MoviesDetails";
 // const MoviesDetails = React.lazy(() => import("../pages/MoviesDetails"));
 // const Child = React.lazy(() => import("../pages/Child"));
@@ -36,7 +37,7 @@ export default function Approuter() {
 
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/SearchBar" element={<SearchBar />} />
+        <Route path="/search" element={<Searchpage />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/moviedetails/:id" element={<MoviesDetails />} />
         <Route path="/movies" element={<Movies />} />

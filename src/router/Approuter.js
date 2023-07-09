@@ -41,6 +41,7 @@ export default function Approuter() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/moviedetails/:id" element={<MoviesDetails />} />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/login" element={<login />} />
 
         <Route path="/contactus" element={<Contactus />}>
           <Route path="Child" element={<Child />} />

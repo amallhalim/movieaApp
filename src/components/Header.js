@@ -55,11 +55,7 @@ export default function Header() {
                   AboutUs
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Register">
-                  Register
-                </Link>
-              </li>
+
               <li>
                 {" "}
                 <button
@@ -92,6 +88,16 @@ export default function Header() {
                   style={{ color: "#d0d7e1" }}
                 />
               </div>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  login
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Register">
+                  Register
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

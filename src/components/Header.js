@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-regular-svg-icons";
 
 import LangContext from "../context/language";
 
@@ -15,7 +16,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className="header">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand mx-5 = " to="Movies">
           MOVIEAPP
@@ -71,7 +72,18 @@ export default function Header() {
               </li>
               <li>
                 {" "}
-                <span className="bg-primary"> ++{favcounter} ++</span>
+                <span
+                  className=""
+                  style={{ color: favcounter !== 0 ? "yellow" : "#d0d7e1" }}
+                  onClick={() => navigate("./favorites")}
+                >
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    className="px-2"
+                    style={{ color: favcounter !== 0 ? "yellow" : "#d0d7e1" }}
+                  />
+                  {favcounter}
+                </span>
               </li>
               <div onClick={() => navigate("./search")} className=" px-5 mt-1">
                 <FontAwesomeIcon
@@ -84,6 +96,6 @@ export default function Header() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

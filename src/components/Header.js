@@ -71,7 +71,7 @@ export default function Header() {
               </li>
               <li>
                 {" "}
-                <span className="bg-primary"> ++{favcounter} ++</span>
+                <span className="bg-primary">{favcounter}</span>
               </li>
               <div onClick={() => navigate("./search")} className=" px-5 mt-1">
                 <FontAwesomeIcon

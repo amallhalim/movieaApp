@@ -39,7 +39,7 @@ export default function Movies() {
       <div className="row my-0">
         {moviesList.map(movie => {
           return (
-            <div className="col-4 my-3 mx-0" key={movie.id}>
+            <div className="col-3 my-3 mx-0" key={movie.id}>
               <Cardd
                 movie={movie}
                 handleClickmovie={e => alertClickedmovie(e, movie)}

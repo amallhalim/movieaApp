@@ -21,6 +21,7 @@ import Searchpage from "../pages/Searchpage";
 // const Notfound = React.lazy(() => import("../pages/Notfound"));
 // const AboutUs = React.lazy(() => import("../pages/AboutUs"));
 // const Movies = React.lazy(() => import("../pages/Movies"));
+import login from "./../pages/Login";
 
 export default function Approuter() {
   return (

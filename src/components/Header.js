@@ -89,12 +89,12 @@ export default function Header() {
                 />
               </div>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link font-weight-bold" to="/login">
                   login
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Register">
+                <Link className="nav-link font-weight-bold" to="/Register">
                   Register
                 </Link>
               </li>

@@ -4,9 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import axiosInstance from "../Apis/config";
 import Cardd from "../components/Card";
+import Header from "./../components/Header";
 
 import { useSelector } from "react-redux";
 import LangContext from "../context/language";
+import Paginationcompnant from "../components/Paginationcompnant";
+import SearchBar from "./../components/SearchBar";
 
 export default function Movies() {
   const navigate = useNavigate();
@@ -47,6 +50,9 @@ export default function Movies() {
             </div>
           );
         })}
+      </div>
+      <div className="">
+        <Paginationcompnant />
       </div>
     </div>
   );

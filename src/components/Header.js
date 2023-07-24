@@ -11,6 +11,7 @@ import LangContext from "../context/language";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./Header.css";
+import Person from "./../pages/Person";
 
 export default function Header() {
   const { lang, setLang } = useContext(LangContext);
@@ -45,6 +46,11 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/favorites">
                   favorites
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/person">
+                  Person
                 </Link>
               </li>
               <li className="nav-item">

@@ -22,6 +22,7 @@ import Searchpage from "../pages/Searchpage";
 // const AboutUs = React.lazy(() => import("../pages/AboutUs"));
 // const Movies = React.lazy(() => import("../pages/Movies"));
 import login from "./../pages/Login";
+import Person from "../pages/Person";
 
 export default function Approuter() {
   return (
@@ -40,6 +41,7 @@ export default function Approuter() {
         <Route path="/Register" element={<Register />} />
         <Route path="/search" element={<Searchpage />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/person" element={<Person />} />
         <Route path="/moviedetails/:id" element={<MoviesDetails />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/login" element={<login />} />

@@ -12,18 +12,14 @@ export default function Favorites() {
   return (
     <div>
       <span>Favorites</span>
-      <span className="bg-primary">favcounter: {favcounter}</span>
+      <span className="text-primary">favcounter: {favcounter}</span>
       <div className="container">
         <div className="container">
           <div className="row my-0">
             {favoritList.map(movie => {
               return (
                 <div className="col-4 my-0 mx-0" key={movie.id}>
-                  <FavCard
-                    movie={movie}
-                    // handleRemovekmovie={e => alertClickedmovie(e, movie)}
-                    // handleStarClick={e => changfavoritestate(e, movie)}
-                  />
+                  <FavCard movie={movie} />
                 </div>
               );
             })}

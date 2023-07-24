@@ -2,8 +2,12 @@ import React from "react";
 import aboutUsimg from "../assets/about us.jpg";
 export default function AboutUs() {
   return (
-    <div className="container AboutUs  h-100 pb-5 ">
-      <img src={aboutUsimg} alt="aboutus" className="w-100 my-5  my-lg-3" />
+    <div className="container AboutUs  pg-primary ">
+      <img
+        src={aboutUsimg}
+        alt="aboutus"
+        className=" my-5  w-50 h-50 my-lg-3"
+      />
       <div className="container text-light">
         <p>
           We are a movie website powered by the TMDb API, which provides us with

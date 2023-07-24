@@ -73,7 +73,8 @@
     height: 102vh !important;
   }
   .Contactus {
-    height: 100vh !important;
-    background-color: red !important;
+    /* height: 102vh !important; */
+    /* margin-bottom: 100px; */
+    /* background-color: red !important; */
   }
 }

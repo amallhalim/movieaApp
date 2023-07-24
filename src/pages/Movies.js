@@ -1,39 +1,37 @@
-import React, { useContext } from "react";
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import axiosInstance from "../Apis/config";
-import Cardd from "../components/Card";
-import Header from "./../components/Header";
 
-import { useSelector } from "react-redux";
+import Cardd from "../components/Card";
+import { PaginationControl } from "react-bootstrap-pagination-control";
 import LangContext from "../context/language";
-import Paginationcompnant from "../components/Paginationcompnant";
-import SearchBar from "./../components/SearchBar";
 
 export default function Movies() {
-  const navigate = useNavigate();
+  const [page, setPage] = useState(1);
   const { lang, setLang } = useContext(LangContext);
-
   const [moviesList, setMoviesList] = useState([]);
-  // const [lang, setLang] = useContext(langContext);
-  console.log("---------------lang", lang);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     axiosInstance
       .get("/movie/popular", {
         params: {
           language: lang,
+          page: page,
         },
       })
-      .then(res =>
-        // console.log("res", res)
-        setMoviesList(res.data.results)
-      )
+      .then(res => {
+        console.log(res.data);
+        console.log(res.data);
+        setMoviesList(res.data.results);
+        setTotalPages(res.data.total_pages);
+      })
       .catch(error => console.log(error));
-  }, [lang]);
+  }, [lang, page]);
 
   const alertClickedmovie = (e, movie) => {
-    // console.log("movie", movie);
     navigate(`/moviedetails/${movie.id} ?title=${movie.title}`);
   };
 
@@ -52,7 +50,16 @@ export default function Movies() {
         })}
       </div>
       <div className="">
-        <Paginationcompnant />
+        <PaginationControl
+          page={page}
+          between={4}
+          total={totalPages}
+          limit={20}
+          changePage={page => {
+            setPage(page);
+          }}
+          ellipsis={1}
+        />
       </div>
     </div>
   );

@@ -57,107 +57,23 @@
   /* background-color: var(--tertiary-bg); */
   /* background-color: var(--body-bg); */
 }
-/* .App {
-  text-align: center;
+
+.textColor {
+  color: #a7acb1;
+}
+.light-textColor {
+  color: #f8f9fa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 1200px) {
+  .moviedetails {
+    height: 100vh !important;
+  }
+  .AboutUs {
+    height: 102vh !important;
+  }
+  .Contactus {
+    height: 100vh !important;
+    background-color: red !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-/*general style*/
-
-/*general style*/
-/* header */
-/*  start header */
-header {
-  /* background-color: var(--body-bg); */
-  /* background-color: var(--tertiary-bg); */
-}
-.header a:-webkit-any-link {
-  /* Link a { */
-  /* text-decoration: none; */
-  /* color: var(--navbar-color); */
-}
-.header a:-webkit-any-link:hover {
-  /* color: var(--navbar-hover-color); */
-}
-.allNavLink {
-  /* background-color: rgb(43, 121, 78) !important; */
-  /* display: flex; */
-  /* justify-items:; */
-  /* align-items: s; */
-  /* justify-content: center; */
-  /* justify-items: s\\\\; */
-}
-
-.header a:-webkit-any-link {
-  /* background-color: rgb(0, 255, 55) !important; */
-  /* padding: 10px; */
-  /* margin-left: 10px; */
-}
-.header .allNavLink a:-webkit-any-link:first-of-type {
-  /* background-color: rgb(0, 81, 255) !important; */
-  /* padding: 10px; */
-  /* margin-left: ; */
-}
-.layoutContainer {
-  /* background-color: var(--tertiary-bg); */
-}
-/*  end  header  */
-/*  start search */
-.searchbar {
-  /* background-color: white; */
-}
-/*  end  search  */
-/*  start  moviedetails  */
-.moviedetails {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* z-index: -5; */
-  /* filter: grayscale(100%); */
-}
-.thecard {
-  /* z-index: 55; */
-}
-.filter {
-  background-image: linear-gradient(
-    to right,
-    rgba(31.5, 10.5, 10.5, 1) calc((50vw - 170px) - 340px),
-    rgba(31.5, 10.5, 10.5, 0.84) 50%,
-    rgba(12, 32, 11, 0.84) 100%
-  );
-  background-color: red;
-}
-/*  end  moviedetails  */

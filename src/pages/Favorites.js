@@ -1,18 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Spinner from "react-bootstrap/Spinner";
 
 import FavCard from "../components/FavCard";
 
 export default function Favorites() {
   const favcounter = useSelector(state => state.favcounter.favCount_val);
   const favoritList = useSelector(state => state.favcounter.favoritList);
-  const favoritesta = useSelector(state => state.favcounter.areFavorite);
-  console.log("f --- favoritesta", favoritesta); //return true
+  // const favoritesta = useSelector(state => state.favcounter.areFavorite);
 
   return (
     <div>
-      <h2>Favorites</h2>
-      <p className="bg-primary">favcounter: {favcounter}</p>
+      <span>Favorites</span>
+      <span className="bg-primary">favcounter: {favcounter}</span>
       <div className="container">
         <div className="container">
           <div className="row my-0">

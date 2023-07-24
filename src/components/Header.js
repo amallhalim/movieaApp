@@ -6,8 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHeart } from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/free-regular-svg-icons";
 
+import LangDropDown from "./LangDroplist";
 import LangContext from "../context/language";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 import "./Header.css";
 
 export default function Header() {
@@ -66,6 +68,8 @@ export default function Header() {
                   Change lang
                 </button>
               </li>
+              <LangDropDown />
+
               <li>
                 {" "}
                 <span

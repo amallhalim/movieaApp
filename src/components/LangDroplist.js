@@ -1,50 +1,47 @@
-import React from "react";
-import { useEffect } from "react";
+// import React from "react";
+// import { useEffect } from "react";
 import axiosInstance from "../Apis/config";
-import { useState } from "react";
+// import { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
+import LangContext from "../context/language";
 export default function LangDropDown() {
-  const [langlist, setLangList] = useState("");
+  const [langlist, setLangList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { lang, setLang } = useContext(LangContext);
 
+  let length = 0;
   useEffect(() => {
     axiosInstance
       .get("configuration/languages")
       .then(res => {
+        length = res.data.length;
         setLangList(res.data);
         setIsLoading(false);
-        console.log(res.data);
+        console.log(res.data[5]);
         console.log("langlist", langlist);
+        console.log("length", length);
       })
       .catch(error => {
         console.log("Error occurred while fetching data:", error);
         setIsLoading(false);
       });
   }, []);
+  const handleLanguageChange = event => {
+    setLang(event.target.value);
+  };
   return (
     <div>
-      <div className="dropdown">
-        <button
-          className="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Dropdown button
-        </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <p className="dropdown-item">Action</p>
-          {/* {langlist.map(lang => (
-            <li key={lang}>
-              <a className="dropdown-item" href="#">
-                <i className="flag-poland flag"></i>
-                {lang}
-              </a>
-            </li>
-          ))} */}
-        </div>
+      <div>
+        <select className="w-100" value={lang} onChange={handleLanguageChange}>
+          {langlist.map((item, index) => (
+            <option key={index} value={item.iso_639_1} className="w-100">
+              {item.english_name}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );

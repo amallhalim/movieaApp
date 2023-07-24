@@ -5,7 +5,7 @@ const INTISAL_STATE = {
   favCount_val: 0,
   favoritList: [],
 };
-console.log("INTISAL_STATE.....INTISAL_STATE", INTISAL_STATE);
+// console.log("INTISAL_STATE.....INTISAL_STATE", INTISAL_STATE);
 const favoriteSlice = createSlice(
   {
     name: "favorite",
@@ -19,12 +19,12 @@ const favoriteSlice = createSlice(
           state.favoritList.push(movie);
           state.favCount_val = state.favoritList.length;
           state.areFavorite[id] = true;
-          console.log(" add  state.areFavorite.....", state.areFavorite);
+          // console.log(" add  state.areFavorite.....", state.areFavorite);
         } else {
           state.favoritList = state.favoritList.filter(m => m.id !== movie.id);
           state.areFavorite[id] = false;
           state.favCount_val = state.favoritList.length;
-          console.log(" remove**  state.areFavorite.....", state.areFavorite);
+          // console.log(" remove**  state.areFavorite.....", state.areFavorite);
         }
 
         // console.log(state.favCount_val);
@@ -37,7 +37,7 @@ const favoriteSlice = createSlice(
         state.favoritList = state.favoritList.filter(m => m.id !== movie.id);
         state.areFavorite[id] = false;
         state.favCount_val = state.favoritList.length;
-        console.log(" ***** rem state.areFavorite.....", state.areFavorite);
+        // console.log(" ***** rem state.areFavorite.....", state.areFavorite);
       },
     },
   }

@@ -28,7 +28,7 @@ export default function Register() {
   // });
 
   const handelechange = e => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     // setregisterForm(e.target.value);
 
     if (e.target.id === "name") {
@@ -105,13 +105,13 @@ export default function Register() {
       alert("Please fill in all required fields.");
       return;
     }
-    console.log({
-      name,
-      username,
-      password,
-      confirmPassword,
-      email,
-    });
+    // console.log({
+    //   name,
+    //   username,
+    //   password,
+    //   confirmPassword,
+    //   email,
+    // });
   };
 
   return (

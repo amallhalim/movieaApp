@@ -12,11 +12,11 @@ export default function Cardd({ movie, handleClickmovie }) {
   const isFavorite = useSelector(
     state => state.favcounter.areFavorite[movie.id] || false
   );
-  console.log("==favoritesta,", isFavorite);
+  // console.log("==favoritesta,", isFavorite);
 
   const handleStarClick = () => {
     dispatch(addtofavoriteState({ movie }));
-    console.log("isfav,", isFavorite);
+    // console.log("isfav,", isFavorite);
   };
 
   return (

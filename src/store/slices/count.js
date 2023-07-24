@@ -11,10 +11,10 @@ const countslice = createSlice({
   reducers: {
     increasecounter(state, action) {
       //implementation
-      console.log(state.counter_val);
-      console.log(state.counter_val + 1);
+      // console.log(state.counter_val);
+      // console.log(state.counter_val + 1);
       state.counter_val = state.counter_val + 1;
-      console.log("===");
+      // console.log("===");
     },
   },
 });

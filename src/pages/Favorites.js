@@ -7,7 +7,6 @@ import FavCard from "../components/FavCard";
 export default function Favorites() {
   const favcounter = useSelector(state => state.favcounter.favCount_val);
   const favoritList = useSelector(state => state.favcounter.favoritList);
-  // const favoritesta = useSelector(state => state.favcounter.areFavorite);
 
   return (
     <div>

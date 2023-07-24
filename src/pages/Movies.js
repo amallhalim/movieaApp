@@ -23,8 +23,6 @@ export default function Movies() {
         },
       })
       .then(res => {
-        // console.log(res.data);
-        // console.log(res.data);
         setMoviesList(res.data.results);
         setTotalPages(res.data.total_pages);
       })

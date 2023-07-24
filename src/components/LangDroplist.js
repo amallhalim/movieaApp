@@ -1,10 +1,7 @@
-// import React from "react";
-// import { useEffect } from "react";
+
 import axiosInstance from "../Apis/config";
-// import { useState } from "react";
 import React, { useContext, useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 
 import LangContext from "../context/language";
 export default function LangDropDown() {
@@ -20,9 +17,7 @@ export default function LangDropDown() {
         length = res.data.length;
         setLangList(res.data);
         setIsLoading(false);
-        console.log(res.data[5]);
-        console.log("langlist", langlist);
-        console.log("length", length);
+
       })
       .catch(error => {
         console.log("Error occurred while fetching data:", error);

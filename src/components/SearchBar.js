@@ -7,7 +7,6 @@ export default function SearchBar({ senddata }) {
   const [data, setData] = useState("");
   const handelOnchange = e => {
     setData(e.target.value);
-    // console.log(data);
   };
   const handleSearch = e => {
     senddata(data);

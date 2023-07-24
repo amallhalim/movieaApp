@@ -6,9 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHeart } from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/free-regular-svg-icons";
 
+import LangDropDown from "./LangDroplist";
 import LangContext from "../context/language";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 import "./Header.css";
+import Person from "./../pages/Person";
 
 export default function Header() {
   const { lang, setLang } = useContext(LangContext);
@@ -46,6 +49,11 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/person">
+                  Person
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/contactus">
                   contactus
                 </Link>
@@ -55,11 +63,7 @@ export default function Header() {
                   AboutUs
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Register">
-                  Register
-                </Link>
-              </li>
+
               <li>
                 {" "}
                 <button
@@ -70,6 +74,8 @@ export default function Header() {
                   Change lang
                 </button>
               </li>
+              <LangDropDown />
+
               <li>
                 {" "}
                 <span
@@ -92,6 +98,16 @@ export default function Header() {
                   style={{ color: "#d0d7e1" }}
                 />
               </div>
+              <li className="nav-item">
+                <Link className="nav-link font-weight-bold" to="/login">
+                  login
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link font-weight-bold" to="/Register">
+                  Register
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

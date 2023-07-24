@@ -1,48 +1,27 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMagnifyingGlass, faHouse } from "@fortawesome/free-solid-svg-icons";
-// import { faShieldHalved } from "@fortawesome/free-brands-svg-icons";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { fas } from "@fortawesome/free-solid-svg-icons";
-import { far } from "@fortawesome/free-regular-svg-icons";
-// import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
-import {
-  faCircleUp,
-  faFaceGrinTongueWink,
-} from "@fortawesome/free-regular-svg-icons";
-// import { faShieldHalved } from "@fortawesome/free-regular-svg-icons";
-import { faCircleRadiation } from "@fortawesome/free-solid-svg-icons";
-// import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-
+import aboutUsimg from "../assets/about us.jpg";
 export default function AboutUs() {
   return (
-    <div>
-      {/* <FontAwesomeIcon
-        icon="fa-solid fa-magnifying-glass "
-        className="bg-danger"
-      /> */}
-      {/* <FontAwesomeIcon icon="fa-brands fa-twitter" /> */}
-      {/* <FontAwesomeIcon icon="fa-brands fa-font-awesome" /> */}
-      {/* <FontAwesomeIcon icon={solid("magnifying-glass")} /> */}
-      {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
-      {/* <FontAwesomeIcon icon={fas} />
-      {/* <FontAwesomeIcon icon={far} /> */}
-      {/* <FontAwesomeIcon icon={fab} />
-      <FontAwesomeIcon icon={faHouse} />
-      <FontAwesomeIcon icon={faShieldHalved} />
-      <FontAwesomeIcon iconName="fa-solid fa-shield-halved" />
-      <FontAwesomeIcon icon={faShieldHalved} /> */}
-      {/* <FontAwesomeIcon icon={faCircleUp} /> */}
-      {/* <FontAwesomeIcon icon={faFaceGrinTongueWink} /> */}
-      {/* <FontAwesomeIcon icon={faCircleRadiation} /> */}
-      {/* <FontAwesomeIcon icon={faShieldHalved} />{" "} */}
-      {/* <FontAwesomeIcon
-        icon={faTrashCan}
-        // onClick={() => setShowWarning(true)}
-        type="button"
-        size="sm"
-      /> */}
+    <div className="container AboutUs  pg-primary ">
+      <img
+        src={aboutUsimg}
+        alt="aboutus"
+        className=" my-5  w-50 h-50 my-lg-3"
+      />
+      <div className="container text-light">
+        <p>
+          We are a movie website powered by the TMDb API, which provides us with
+          access to a vast collection of movie data. Our goal is to make it easy
+          for movie fans to discover new movies, learn about their favorite
+          actors and directors, and stay up-to-date on the latest movie news.
+          Our website features a variety of movie-related content, including
+          movie reviews, trailers, and news articles. We also offer a search
+          function that allows users to find specific movies or information
+          about actors and directors. Thank you for visiting our website. We
+          hope you enjoy using it as much as we enjoy creating it. If you have
+          any feedback or suggestions, please don't hesitate to contact us.
+        </p>
+      </div>
     </div>
   );
 }

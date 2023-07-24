@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 export default function LayoutWithNav() {
   return (
     <>
-      <Header />
-      <div className="bg-dark ">
+      <Header className="" />
+      <div className="bg-dark mt-5 pt-5 ">
         <Outlet />
       </div>
     </>
